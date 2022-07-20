@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+<body>
+   {% block content %}
+
+      <!------------- //about-banner// -------------->
+      <!------------- //about-banner// -------------->
+      <section class="about-us">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="banner-contnet">
+                    <h2>Product</h2> 
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!------------- //about-banner// -------------->
+      <!------------- //about-banner// -------------->
+      <section class="popular-wap">
+         <div class="container">
+            <div class="topbar text-center">
+               <span>Courses</span>
+               <h2>Our Products</h2>
+            </div>
+            <div class="row mt-5">
+               <div class="col-md-12">
+                  <div class="Common_outer">
+                     <div class="owl-carousel owl-theme" id="Bestseller-slider">
+                        <div class="item">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="Popular-classmain">
+                                    <div class="Popular-classimag">
+                                       <img src="{% static 'assets/images/program-3.jpg' %}" alt="">
+                                    </div>
+                                    <div class="Popular-join">
+                                       <div class="Popular-content">
+                                          <h6>Playgroup</h6>
+                                          <!-- <p>The perfect class for your child with the best staff and best teachers.</p> -->
+                                          <b>Age: <strong>1.5-2.5 year</strong></b>
+                                       </div>
+                                       <a class="buttonwap" href="{% url 'playgroup' %}">Buy Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="item">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="Popular-classmain">
+                                    <div class="Popular-classimag">
+                                       <img src="{% static 'assets/images/program-3.jpg' %}" alt="">
+                                    </div>
+                                    <div class="Popular-join">
+                                       <div class="Popular-content">
+                                          <h6>Ṇursery</h6>
+                                          <!-- <p>The perfect class for your child with the best staff and best teachers.</p> -->
+                                          <b>Age: <strong>2.5-3.5 year</strong></b>
+                                       </div>
+                                       <a class="buttonwap" href="{% url 'nursery' %}"> Buy Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+                        <div class="item">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="Popular-classmain">
+                                    <div class="Popular-classimag">
+                                       <img src="{% static 'assets/images/program-3.jpg' %}" alt="">
+                                    </div>
+                                    <div class="Popular-join">
+                                       <div class="Popular-content">
+                                          <h6>KG – I</h6>
+                                          <!-- <p>The perfect class for your child with the best staff and best teachers.</p> -->
+                                          <b>Age: <strong>3.5-4.5 year</strong></b>
+                                       </div>
+                                       <a class="buttonwap" href="{% url 'KG1' %}"> Buy Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="item">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="Popular-classmain">
+                                    <div class="Popular-classimag">
+                                       <img src="{% static 'assets/images/program-3.jpg' %}" alt="">
+                                    </div>
+                                    <div class="Popular-join">
+                                       <div class="Popular-content">
+                                          <h6>KG – II</h6>
+                                          <!-- <p>The perfect class for your child with the best staff and best teachers.</p> -->
+                                          <b>Age: <strong>4.5-6 year</strong></b>
+                                       </div>
+                                       <a class="buttonwap" href="{% url 'KG2' %}"> Buy Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="item">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="Popular-classmain">
+                                    <div class="Popular-classimag">
+                                       <img src="{% static 'assets/images/program-3.jpg' %}" alt="">
+                                    </div>
+                                    <div class="Popular-join">
+                                       <div class="Popular-content">
+                                          <h6>Phonics</h6>
+                                          <!-- <p>The perfect class for your child with the best staff and best teachers.</p> -->
+                                          <b>Age: <strong>1.5-2.5 year</strong></b>
+                                       </div>
+                                       <a class="buttonwap" href="{% url 'phonics' %}">Buy Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> 
+      </section>
+      {% endblock %}

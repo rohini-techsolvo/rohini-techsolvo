@@ -1,0 +1,107 @@
+
+{% extends 'base.html' %}
+{% load static %}
+<body>
+   {% block content %}
+      <!------------- //about-banner// -------------->
+      <!------------- //about-banner// -------------->
+      <section class="about-us">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="banner-contnet">
+                    <h2>login</h2> 
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!------------- //about-banner// -------------->
+      <!------------- //about-banner// -------------->
+
+      <section class="login-wap">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-md-6">
+                  <div class="wrappers">
+                  <form class="login" method="post" action="{% url 'login_user' %}" id="myform">
+                     {% csrf_token %}
+                  <input type="hidden">
+                           <h2>Login</h2>
+                           <div class="row">
+                              {% if messages %}
+                              {% for message in messages %}
+                                 {% if "email" in message.tags %}
+                                    <div id="msg" class="alert alert-success" role="alert">
+                                          {{ message }}
+                                     </div>
+                                  {% endif %}
+                                 {% endfor %}
+                           {% endif %}
+   
+                           {% if messages %}
+                              {% for message in messages %}
+                                 {% if "success_msg" in message.tags %}
+                                    <div id="msg" class="alert alert-success" role="alert">
+                                          {{ message }}
+                                     </div>
+                                  {% endif %}
+                                 {% endfor %}
+                           {% endif %}
+                              <div class="col-md-12">
+                                  <div class="form-group position-relative">
+                                     <label>Email </label>
+                                     <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                                  </div>
+                              </div>
+                               <div class="col-md-12">
+                                  <div class="form-group position-relative">
+                                     <label>Password</label>
+                                     <input type="password" class="form-control" name="password" placeholder="Password" id="password" required="">
+                                  </div>
+                               </div>
+                               {% if messages %}
+                                    {% for message in messages %}
+                                       {% if "worng_pass" in message.tags %}
+                                          <div id="msg" class="alert alert-success" role="alert">
+                                                {{ message }}
+                                          </div>
+                                       {% endif %}
+                                    {% endfor %}
+                                 {% endif %}
+                               <div class="col-md-12">
+                                 <p class="forget"><a href="/changepassword/">Forgot your password?</a></p>
+                                  
+                               </div>
+                          
+                               <div class="col-md-12 text-center">
+                                  <button class="Register">Sign in</button>
+                               </div>
+                               <p class="mt-6 text-xs text-gray-600 text-center"> I agree to abide by Brainy Ladder
+                                  <a href="#" class="border-b border-gray-500 border-dotted">
+                                    Terms of Service
+                                  </a>
+                                  and its
+                                  <a href="#" class="border-b border-gray-500 border-dotted">
+                                    Privacy Policy
+                                  </a>
+                                </p>
+                           </div>
+                       </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      
+
+
+      {% endblock %}
+
+   
+
+
+
+
+
+

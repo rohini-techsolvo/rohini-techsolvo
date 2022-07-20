@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+<body>
+   {% block content %}
+
+
+      <!------------- //about-banner// -------------->
+      <!------------- //about-banner// -------------->
+      <section class="about-us">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="banner-contnet">
+                    <h2>Phonics Leran Kit</h2> 
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!------------- //about-banner// -------------->
+      <!------------- //about-banner// -------------->
+      <section class="single-product">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="prduct-imag">
+                     <img src="{%static 'assets/images/about2.jpg' %}" alt="">
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="right-contentwap">
+                     <h6>what's in the kit</h6>
+                     <span>"A single box....</span>
+                     <p>Phonics activity kit by Brainy Ladder is suitable for the children of age group of 3 – 6 years. This kit helps your child in pronouncing, reading and spelling almost every word in the English language.</p>
+                     <p>Phonics Kit by Brainy Ladder comes in two categories:</p>
+                     <h6>1. KG – I</h6>
+                     <p>This KG – I kit of phonics comprises of beginning sounds and words. The kit also contains fun and engaging content, which further comprises of:</p>
+                     <ul class="clild">
+                         <li>Flash Cards</li>
+                         <li>CVC word cards – both building words & button words’ cards</li>
+                         <li>Phonics Sound Mat</li>
+                         <li>Sound Puzzle</li>
+                         <li>Tracing Words</li>
+                         <li>Tricky Words Mat</li>
+                     </ul>
+                     <h6>2. KG – I</h6>
+                     <p>The KG – II kit of Phonics by Brainy Ladder covers English sounds containing sounds of Consonants, Vowels & Graphemes. The kit also includes illustrative activities consisting of:</p>
+                     <ul class="clild">
+                         <li>Fun & engaging phonics stories</li>
+                         <li>Phonics games</li>
+                         <li>Letter formation sheet</li>
+                         <li>Sentence reading worksheet</li>
+                         <li>Phonics sound mat</li>
+                         <li>Tricky words</li>
+                         <li>Vowels activity cards</li>
+                         <li>CVC (consonant vowel consonant) word cards</li>
+                         <li>Captions</li>
+                         <li>The law of writing sheet &tracing words</li>
+                     </ul>
+                     <a href="{% url 'cart' %}" class="bunow">Buy Now for 3799/-</a>
+                  </div>
+               </div>
+               <div class="col-md-12">
+                  <div class="kit">
+                     <h6>A single box containing a year’s worth of learning for your children containing 300+ high quality & engaging study materials</h6>
+                     <ul>
+                        <li><i class="fas fa-hand-point-right"></i>Worksheets – 200+ worksheets have been curated in the most engaging manner keeping the child’s average attention span in mind</li>
+                        <li><i class="fas fa-hand-point-right"></i>Flashcards – 30+ full sized flashcards, which are the most versatile items in our kits and are used to learn basic concepts in many ways</li>
+                        <li><i class="fas fa-hand-point-right"></i>Activity Sheets – 200+ Activity sheets are designed in a manner to ensure your child’s engagement towards learning. Activities include puzzles, craft integrated & DIY activities</li>
+                        <li><i class="fas fa-hand-point-right"></i>Posters – Attractive large print posters for activities which help in learning new concepts in an interesting manner.</li>
+                        <li><i class="fas fa-hand-point-right"></i>………and many more exciting activitie.</li>
+                     </ul>
+                     
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </section>
+      
+
+
+      {% endblock %}

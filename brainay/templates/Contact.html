@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+<body>
+   {% block content %}
+
+      <section class="about-us">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="banner-contnet">
+                    <h2>Contact Us</h2> 
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!------------- //about-banner// -------------->
+      <!------------- //about-banner// -------------->
+      <section class="contact-content sec-padding" style="background-image: url(assets/images/bg2.jpeg);">
+          <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-md-8">
+                  <div class="contct-wap">
+                     <h2>GET IN TOUCH</h2>
+                     <form class="contact-form row" id="contact-page-contact-form">
+                        <div class="col-md-6">
+                           <label>Enter Name of Your Child <span>*</span></label>
+                          <input type="text" name="name" placeholder="">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Enter Your Name <span>*</span></label>
+                          <input type="text" name="Last">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Enter Your Mobile Number <span>*</span></label>
+                          <input type="number" name="phone">
+                        </div>
+                        <div class="col-md-6">
+                           <label>Email Address <span>*</span></label>
+                          <input type="email" name="email">
+                        </div>
+                        <div class="col-md-12">
+                           <label>City<span>*</span></label>
+                           <select class="form-control" id="exampleFormControlSelect1">
+                              <option>indore</option>
+                              <option>Bhopal</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                          <button class="custom-btn" type="submit">Send</button>
+                        </div>
+                     </form>
+                  </div>
+                  <p class="Call">Call us directly at <a href="tel:9630014995"><b>+96300-14995</b> </a><br>
+                     Email us at <a href="mailto:support@classmonitor.com" class="text-dark"><b>info@brainayladder.com</b></a>
+                  </p>
+               </div>
+            </div>
+          </div>
+      </section>
+
+
+
+      {% endblock %}
+      
+
+   
+
+
+
+
+
+

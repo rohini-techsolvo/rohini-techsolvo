@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+<body>
+   {% block content %}
+
+      <!------------- //about-banner// -------------->
+      <!------------- //about-banner// -------------->
+      <section class="about-us">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="banner-contnet">
+                    <h2>Nursery Learning Kit</h2> 
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!------------- //about-banner// -------------->
+      <!------------- //about-banner// -------------->
+      <section class="single-product">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="prduct-imag">
+                     <img src="{% static 'assets/images/about2.jpg' %} " alt="">
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="right-contentwap">
+                     <h6>what's in the kit</h6>
+                     <span>"A single box....</span>
+                     <p>Brainy Ladder Nursery kits are a great way for keeping your children away from time consuming phone screens. These educational kits for your children will not only help them in spending time in a productive manner but also will keep their early education in check.</p>
+                     <p>The nursery Brainy Ladder activity kit provides a holistic learning experience for your children. This kit is suitable for ages 2.5 – 3.5 years; this year long activity kit is an integrated learning program which is designed to develop the needed skills in your child. Skills such as linguistic skills, logical thinking, sensory and motor skills, cognitive skills and social skills. Choose our learning kit to make your child have fun and help them develop fine motor skills.</p>
+                     <p>This activity kit dedicated to the category of playgroup children helps in building:</p>
+                     <ul class="clild">
+                         <li>Early Literacy Skills – Building vocab with the help of pictures, tracing & pronunciation of both capital and small letters, introduction of variety of painting tools for good grip, enhanced visual – motor coordination, answering the ‘who’, ‘what’, ‘where’, ‘with’, ‘when’ with play cards</li>
+                         <li>Early Numeracy Skills – identifying and matching numbers, grouping by numbers, complex sorting by combining colors, shapes and other things,</li>
+                         <li>Birds & Animals – introducing the birds & animals via different activities like sort & match, drawing and coloring on worksheets</li>
+                         <li>Actions we do – teaching them the basic gestures and actions we do for how, when, etc</li>
+                         <li>Social & Emotional Development – encouraging cooperative play, encourage empathy and understanding of social contexts, prompts to encourage independent decision making by giving choices</li>
+                     </ul>
+                      <a href="{% url 'cart' %}" class="bunow">Buy Now for 4799/-</a>
+                  </div>
+               </div>
+               <div class="col-md-12">
+                  <div class="kit">
+                     <h6>A single box containing a year’s worth of learning for your children containing 300+ high quality & engaging study materials</h6>
+                     <ul>
+                        <li><i class="fas fa-hand-point-right"></i>Worksheets – 200+ worksheets have been curated in the most engaging manner keeping the child’s average attention span in mind</li>
+                        <li><i class="fas fa-hand-point-right"></i>Flashcards – 30+ full sized flashcards, which are the most versatile items in our kits and are used to learn basic concepts in many ways</li>
+                        <li><i class="fas fa-hand-point-right"></i>Activity Sheets – 200+ Activity sheets are designed in a manner to ensure your child’s engagement towards learning. Activities include puzzles, craft integrated & DIY activities</li>
+                        <li><i class="fas fa-hand-point-right"></i>Posters – Attractive large print posters for activities which help in learning new concepts in an interesting manner.</li>
+                        <li><i class="fas fa-hand-point-right"></i>………and many more exciting activitie.</li>
+                     </ul>
+                     
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </section>
+      
+
+
+      {% endblock %}

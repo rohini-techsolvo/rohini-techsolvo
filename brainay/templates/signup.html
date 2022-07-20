@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+<body>
+   {% block content %}
+
+      <!------------- //about-banner// -------------->
+      <!------------- //about-banner// -------------->
+      <section class="about-us">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="banner-contnet">
+                    <h2>login</h2> 
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!------------- //about-banner// -------------->
+      <!------------- //about-banner// -------------->
+
+      <section class="login-wap">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-md-6">
+                  <div class="wrappers">
+                     <form class="login" method="post" action="{%url 'register' %}" id="myform">
+                        {% csrf_token %}
+                      <h2>Sign Up</h2>
+                      <div class="row">
+                         <div class="col-md-12">
+                            <div class="form-group position-relative">
+                               <label>Name</label>
+                               <input type="text" class="form-control" id="username" pattern="[a-zA-Z'-'\s]*" name="username" placeholder="Enter Your Name" required="required">
+                            </div>
+                         </div>
+                         <div class="col-md-12">
+                            <div class="form-group position-relative">
+                              {% if messages %}
+                                 {% for message in messages %}
+                                    {% if "success_msg" in message.tags %}
+                                       <div id="msg" class="alert alert-success" role="alert">
+                                             {{ message }}
+                                       </div>
+                                    {% endif %}
+                                 {% endfor %}
+                              {% endif %}
+                               <label>Email </label>
+                               <input type="email" class="form-control" name="email" placeholder="Enter Your Email" required="" id="email" required="required">
+                            </div>
+                         </div>
+                        
+                         <div class="col-md-12">
+                            <div class="form-group position-relative">
+                               <label>Phone Number</label>
+                               <input type="number" class="form-control" name="contact_number" placeholder="Enter Your Phone Number" id="contact_number" onKeyUp="check_contact(this)" required="required" >
+                                  <span id = "message" style="color:red"> </span>
+                            </div>
+                         </div>
+                         <div class="col-md-12">
+                           <div class="form-group position-relative" name="" id="frmCheckPassword">
+                              <label>Password</label>
+                              <input type="password" class="form-control" id="password" name="password" onKeyUp="checkPasswordStrength();"  placeholder="Enter Your Password" required="required">
+                              <div id="password-strength-status"></div>
+                           </div>
+                        </div>
+                         
+                         <div class="col-md-12">
+                            <div class="form-group position-relative">
+                               <label>Confirm Password</label>
+                               <input type="password" class="form-control" name="confirm_password" placeholder="Enter Your Confirm Password" id="confirm_password" onKeyUp="check_password(this)" required="required">
+                               <div style="color: red;" class="error_form" id="err_pass"></div>
+                            </div>
+                         </div>
+                         <div class="col-md-12 text-center">
+                            <button class="Register" value="submit" id="signupbutton">Register</button>
+                         </div>
+                      </div>
+                   </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      
+<script>
+    
+   function check_contact(ths){
+     
+      var cn = document.getElementById("contact_number").value
+      var regx = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/ ;
+      
+      if(cn.length != 10) {
+
+         document.getElementById("message").innerHTML = "Please put 10  digit mobile number.";  
+         document.getElementById("submitsubscribe").disabled = true;
+         
+
+       } 
+         if(cn.length == 10) {
+            $('#message').hide();
+            document.getElementById("submitsubscribe").disabled = false;
+         }
+
+            if(!regx.test(cn)){
+
+               document.getElementById("message").innerHTML = "Please enter valid contact number.";
+
+               document.getElementById("submitsubscribe").disabled = true;
+
+            }
+      else{
+         document.getElementById("submitsubscribe").disabled = false;
+      }
+
+   }
+
+
+
+   function checkPasswordStrength() {
+      
+      var number = /([0-9])/;
+      var alphabets = /([a-zA-Z])/;
+      var special_characters = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
+      if ($('#password').val().length < 6 ) {
+        
+          $('#password-strength-status').removeClass();
+          $('#password-strength-status').addClass('weak-password');
+          $('#password-strength-status').html("Weak (should be atleast 6 characters.)");
+          document.getElementById("signupbutton").disabled = true;
+         
+      } else {
+         
+          if ($('#password').val().match(number) && $('#password').val().match(alphabets) && $('#password').val().match(special_characters)) {
+              $('#password-strength-status').removeClass();
+              $('#password-strength-status').addClass('strong-password');
+              $('#password-strength-status').html("Strong");
+              document.getElementById("signupbutton").disabled = false;
+              
+          } else {
+            
+              $('#password-strength-status').removeClass();
+              $('#password-strength-status').addClass('medium-password');
+              $('#password-strength-status').html("Medium (should include alphabets, numbers and special characters.)");
+              document.getElementById("signupbutton").disabled = true;
+          }
+      }
+  }
+
+
+  function check_password(ths){
+                  
+                  
+   conf_val = $('#confirm_password').val();
+   password =  $('#password').val();
+   if (conf_val != password)
+   {
+      
+      $("#err_pass").text("Password do not match.");
+      
+   }
+   else{
+      $('#err_pass').hide();
+     
+   }
+
+   
+}
+
+
+
+</script>
+
+      {% endblock %}

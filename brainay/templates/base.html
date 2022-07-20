@@ -1,0 +1,418 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" href="{% static 'assets/images/logo2.png' %}" type="{% static 'assets/images/logo2.png' %}" sizes="16x16">
+      <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+      <link href="{% static 'assets/css/animate.css' %}" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+      <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}" type="text/css">
+      <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %} " type="text/css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+      <link href="{% static 'assets/css/custom.css' %} " rel="stylesheet">
+      <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+      <link href="{% static 'assets/css/responsive.css' %}" rel="stylesheet">
+      <title>Brainy Ladder</title>
+   </head>
+   <body>
+      <!------------- //header// -------------->
+      <!------------- //header// -------------->
+      <header class="header home_header">
+         <div class="container">
+            <div class="Main_navbar" id="desktopheader">
+               <div class="row justify-content-center">
+                  <div class="col-md-12">
+                     <div class="row">
+                        <div class="col-lg-2 col-5 pr-0">
+                           <div class="logo">
+                              <h2><a href="{% url 'index' %}"><img src="{% static 'assets/images/logo3.png' %} "></a></h2>
+                           </div>
+                        </div>
+                        <div class="col-lg-10 col-7">
+                           <!-- Header Search -->
+                           <div class="canvas_open">
+                              <a href="javascript:void(0)"><i class="fas fa-bars"></i></a>
+                           </div>
+                           <!-- menu -->
+                           <div class="menu">
+                              <nav>
+                                 <ul>
+                                    <li><a href="{% url 'index' %}">Home</a></li>
+                                    <li><a href="{% url 'about_us' %}">About Us</a></li>
+                                    <li>
+                                       <a href="#">Products <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                       <ul>
+                                          <li><a href="{% url 'product' %}">Annual learning kit</a></li>
+                                          <li><a href="{% url 'phonics' %}">Phonics </a></li>
+                                       </ul>
+                                    </li>
+                                    <li>
+                                       <a href="#">Shop by age <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                       <ul>
+                                          {% comment %} <li><a href="{% url 'product' %}">1-3 Years</a></li>
+                                          <li><a href="{% url 'product' %}">3-6 Years</a></li> {% endcomment %}
+                                          <li><a href="{% url 'playgroup' %}">1.5-2.5 Years</a></li>
+                                          <li><a href="{% url 'nursery' %}">2.5-3.5 Years</a></li>
+                                          <li><a href="{% url 'KG1' %}">3.5-4.5 Years</a></li>
+                                          <li><a href="{% url 'KG2' %}">4.5-6 Years</a></li>
+                                       </ul>
+                                    </li>
+                                    <li><a href="{% url 'Blog' %}">Blog</a></li>
+                                    <li><a href="{% url 'Contact' %}">Contact Us</a></li>
+                                    <li><div class="Signup">
+                                       <a href="{% url 'login' %}" class="Login">Login</a>  / <a href="{% url 'signup' %}" class="Signup">Signup</a>
+                                    </div></li>
+                                    <li><a href="#" class="bunow">Buy Now</a></li>
+                                 </ul>
+                              </nav>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+         <!-- Start Mobile Menu Area -->
+         <div class="mobile-menu-area">
+            <!--offcanvas menu area start-->
+            <div class="off_canvars_overlay">
+            </div>
+            <div class="offcanvas_menu">
+               <div class="offcanvas_menu_wrapper">
+                  <div class="canvas_close">
+                     <a href="javascript:void(0)"><i class="fas fa-times"></i></a>  
+                  </div>
+                  <div class="mobile-logo">
+                     <h2><a href="{% url 'index' %}"><img src="assets/images/logo3.png"></a></h2>
+                  </div>
+                  <div id="menu" class="text-left ">
+                     <ul class="offcanvas_main_menu">
+                        <li class="menu-item-has-children">
+                           <a href="{% url 'index' %}">Home</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                           <a href="{% url 'about_us' %}">About Us</a> 
+                        </li>
+                        <li class="menu-item-has-children active">
+                           <a href="#">Products</a>
+                           <ul class="sub-menu">
+                              <li><a href="{% url 'product' %}">Monthly learning</a></li>
+                              <li><a href="{% url 'phonics' %}">Phonics</a></li>
+                           </ul>
+                        </li>
+                        <li class="menu-item-has-children active">
+                           <a href="#">Shop by age</a>
+                           <ul class="sub-menu">
+                              <li><a href="{% url 'playgroup' %}">1 - 2 Years</a></li>
+                              <li><a href="{% url 'nursery' %}">2-3 Years</a></li>
+                           </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                           <a href="{% url 'Blog' %}">Blog</a> 
+                        </li>
+                        <li class="menu-item-has-children">
+                           <a href="{% url 'Contact' %}">Contact Us</a> 
+                        </li>
+                        <li class="menu-item-has-children">
+                           <a href="#">Login/Signup</a> 
+                        </li>
+                        <li><a href="#" class="bunow">Buy Now</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--offcanvas menu area end-->
+         <!------------- //header// -------------->
+         <!------------- //header// -------------->
+      {% block content %}
+      {% endblock %}
+
+      <section class="newsletter" style="background-image: url({% static 'assets/images/footer-bg.png' %});">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-5">
+                  <div class="newsletter-content">
+                     <h2>Sign up for newsletter</h2>
+                  </div>
+               </div>
+               <div class="col-md-7">
+                  <div  class="newsletter-wap">
+                     <div class="form-group">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Your email">
+                        <button name="submit" class="site-button buttonSMT">Subscribe</button>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </section>
+      <!------------- //newsletter// -------------->
+      <!------------- //newsletter// -------------->
+
+      <!------------- //footer-section// -------------->
+      <!------------- //footer-section// -------------->
+      <footer class="footer-wap">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="footer_logo">
+                     <a href= "{% url 'index' %}"> <img src="{% static 'assets/images/footerlogo.png' %}" class="img-fluid"></a>
+                     </div>
+                  <div class="footer-clearfix">
+                     <h3>Do you have questions <br>and want to contact us?</h3>
+                     <a href="tel:96300-14995" class="phone-link"><i class="fas fa-phone-volume"></i> +91-96300-14995</a>
+                  </div> 
+               </div>
+               <div class="col-md-2">
+                  <div class="footer-clearfix">
+                     <h3>Links</h3>
+                     <ul class="mt-4">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'about_us' %}">About Us</a></li>
+                        <li><a href="{% url 'product' %}">Programs</a></li>
+                        <li><a href="{% url 'Blog' %}">Blog</a></li>
+                        <li><a href="{% url 'Contact' %}">Contact Us</a></li>
+                     </ul>
+                  </div> 
+               </div>
+               <div class="col-md-3">
+                  <div class="footer-clearfix pl-5">
+                     <h3>Support</h3>
+                     <div class="mainfooter mt-4">
+                         <ul class="mt-4">
+                        <li><a href="#">Help & FAQ</a></li>
+                        <li><a href="{% url 'privacypolicy' %}">Privacy Policy</a></li>
+                        <li><a href="{% url 'privacypolicy' %}">Cookies Policy</a></li>
+                        <li><a href="{% url 'trackorder' %}">Track Order</a></li>
+                     </ul>
+                        
+                     </div>
+                  </div> 
+               </div>
+               <div class="col-md-3">
+                  <div class="footer-clearfix pl-5">
+                     <h3>Social Media</h3>
+                     <ul class="mt-4 Social">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                     </ul>
+                     <ul class="social_list">
+                        <li><a href="#"><img src="{% static 'assets/images/google.png' %}"></a></li>
+                        <li><a href="#"><img src="{% static 'assets/images/apple.png' %}"></a></li>
+                     </ul>
+                  </div> 
+               </div>
+               
+            </div>
+            
+         </div>
+      </footer>
+      <div class="footer-bag" style="background-image: url({% static 'assets/images/footer.png' %});">
+      </div>
+      <!------------- //footer-section// -------------->
+      <!------------- //footer-section// -------------->
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="free-form">
+                  <div class="card login_page shadow rounded border-0">
+                     <div class="card-body">
+                        <form class="login-form">
+                           <h2>Fill in your details to Book a FREE Demo Class</h2>
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="form-group position-relative">
+                                    <label>Name <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" placeholder="Name" name="Enter your Email ID" required="">
+                                 </div>
+                              </div>
+                              <div class="col-md-12">
+                                 <div class="form-group position-relative">
+                                    <label>Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" placeholder="Email" name="Enter your Email ID" required="">
+                                 </div>
+                              </div>
+                              <div class="col-md-12">
+                                 <div class="form-group position-relative">
+                                    <label>Mobile Number <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" placeholder="Enter your mobile number" required="">
+                                 </div>
+                              </div>
+                              <div class="col-md-12">
+                                 <div class="form-group position-relative">                                               
+                                    <label>Program <span class="text-danger">*</span></label>
+                                    <select class="form-select" aria-label="Default select example">
+                                      <option selected="">Select </option>
+                                      <option value="1">Playgroup</option>
+                                      <option value="2">Nursery</option>
+                                      <option value="3">UKG</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="col-md-12 text-center">
+                                 <button class="buton2">Book a Free Demo </button>
+                              </div>
+                     
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!------------- //footer-section// -------------->
+      <script src="{%static 'assets/js/jquery-3.2.1.slim.min.js' %}"></script>
+      <script src="{%static 'assets/js/bootstrap.min.js' %}"></script>
+      <script type="text/javascript" src="{%static 'assets/js/jquery.min.js' %}"></script>
+      <script type="text/javascript" src="{%static 'assets/js/owl.carousel.min.js' %}"></script>
+      <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+      <script src="{%static 'assets/js/wow.min.js' %}"></script>
+      <script src="{%static 'assets/js/custom.js' %}"></script>
+      <script type="text/javascript">
+       $('#Bestseller-slider').owlCarousel({
+            loop:false,
+            nav:false,
+            autoplay:true,
+            dots:false,
+            margin:20,
+            smartSpeed: 1000,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:3
+                }
+            },navText: ["<i class='fas fa-arrow-left' aria-hidden='true'></i>","<i class='fas fa-arrow-right' aria-hidden='true'></i>"]
+        });
+    </script>
+     <script type="text/javascript">
+       $('#Bestseller-slider2').owlCarousel({
+            loop:false,
+            nav:false,
+            // autoplay:true,
+            dots:true,
+            margin:20,
+            smartSpeed: 1000,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            },navText: ["<i class='fas fa-arrow-left' aria-hidden='true'></i>","<i class='fas fa-arrow-right' aria-hidden='true'></i>"]
+        });
+    </script>
+     <script type="text/javascript">
+        $(document).ready(function(){
+  
+        $(".Modern-Slider").slick({
+          autoplay:true,
+          autoplaySpeed:10000,
+          speed:600,
+          slidesToShow:1,
+          slidesToScroll:1,
+          pauseOnHover:false,
+          dots:true,
+          pauseOnDotsHover:true,
+          cssEase:'linear',
+         // fade:true,
+          draggable:false,
+          prevArrow:'<button class="PrevArrow"></button>',
+          nextArrow:'<button class="NextArrow"></button>', 
+        });
+        
+      })
+      </script>
+      <script type="text/javascript">
+
+         //uses classList, setAttribute, and querySelectorAll
+//if you want this to work in IE8/9 youll need to polyfill these
+(function(){
+   var d = document,
+   accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+   setAria,
+   setAccordionAria,
+   switchAccordion,
+  touchSupported = ('ontouchstart' in window),
+  pointerSupported = ('pointerdown' in window);
+  
+  skipClickDelay = function(e){
+    e.preventDefault();
+    e.target.click();
+  }
+
+      setAriaAttr = function(el, ariaType, newProperty){
+      el.setAttribute(ariaType, newProperty);
+   };
+   setAccordionAria = function(el1, el2, expanded){
+      switch(expanded) {
+      case "true":
+         setAriaAttr(el1, 'aria-expanded', 'true');
+         setAriaAttr(el2, 'aria-hidden', 'false');
+         break;
+      case "false":
+         setAriaAttr(el1, 'aria-expanded', 'false');
+         setAriaAttr(el2, 'aria-hidden', 'true');
+         break;
+      default:
+            break;
+      }
+   };
+//function
+switchAccordion = function(e) {
+  console.log("triggered");
+   e.preventDefault();
+   var thisAnswer = e.target.parentNode.nextElementSibling;
+   var thisQuestion = e.target;
+   if(thisAnswer.classList.contains('is-collapsed')) {
+      setAccordionAria(thisQuestion, thisAnswer, 'true');
+   } else {
+      setAccordionAria(thisQuestion, thisAnswer, 'false');
+   }
+   thisQuestion.classList.toggle('is-collapsed');
+   thisQuestion.classList.toggle('is-expanded');
+      thisAnswer.classList.toggle('is-collapsed');
+      thisAnswer.classList.toggle('is-expanded');
+   
+   thisAnswer.classList.toggle('animateIn');
+   };
+   for (var i=0,len=accordionToggles.length; i<len; i++) {
+      if(touchSupported) {
+      accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+    }
+    if(pointerSupported){
+      accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+    }
+    accordionToggles[i].addEventListener('click', switchAccordion, false);
+  }
+})();
+      </script>
+      
+   </body>
+</html>

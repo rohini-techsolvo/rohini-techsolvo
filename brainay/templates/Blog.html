@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+{% load static %}
+<body>
+   {% block content %}
+  
+      <section class="about-us">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="banner-contnet">
+                    <h2>Blog</h2> 
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!------------- //about-banner// -------------->
+      <!------------- //about-banner// -------------->
+      <section class="blog">
+         <div class="blog-wap">
+            <div class="container">
+               <div class="row mt-5">
+                  <div class="col-md-12">
+                     <div class="row">
+                        <div class="col-md-8 col-sm-8 col-12">
+                           <div class="blog-main">
+                              <div class="post-thumbnail2">
+                                 <a href="{% url 'singleblog' %}"><img src="{% static 'assets/images/singleblog.jpg' %}"></a>
+                              </div>
+                              <div class="post-content-wrap">
+                                 <h3><a href="singleblog.html" rel="bookmark">8 ways to keep your heart forever young</a></h3>
+                                 <div class="entry-meta"> 
+                                    <span class="posted-on">
+                                       <a href="{% url 'singleblog' %}">
+                                       <time class="published">December 13, 2019</time></a>
+                                    </span> 
+                                    <span class="posted-author">
+                                       <span>by </span><a href="{% url 'singleblog' %}">admin</a>
+                                    </span>
+                                 </div>
+                                 <p>With 10+ apps and plugins, you’ll be able to review your upcoming tasks – and jot down new ones – no matter where you happen to be. Everything stays in perfect sync across.</p>
+                                 <div class="baneer-buton mt-5">
+                                    <a href="{% url 'singleblog' %}" class="buton2">Read more</a> 
+                                 </div>
+                                 
+                              </div>
+                           </div>
+                           <div class="blog-main">
+                              <div class="post-thumbnail2">
+                                 <a href="{% url 'singleblog' %}"><img src="{% static 'assets/images/blog-2.jpg' %} "></a>
+                              </div>
+                              <div class="post-content-wrap">
+                                 <h3><a href="singleblog.html" rel="bookmark">8 ways to keep your heart forever young</a></h3>
+                                 <div class="entry-meta"> 
+                                    <span class="posted-on">
+                                       <a href="{% url 'singleblog' %}">
+                                       <time class="published">December 13, 2019</time></a>
+                                    </span> 
+                                    <span class="posted-author">
+                                       <span>by </span><a href="{% url 'singleblog' %}">admin</a>
+                                    </span>
+                                 </div>
+                                 <p>With 10+ apps and plugins, you’ll be able to review your upcoming tasks – and jot down new ones – no matter where you happen to be. Everything stays in perfect sync across.</p>
+                                 <div class="baneer-buton mt-5">
+                                    <a href="{% url 'singleblog' %}" class="buton2">Read more</a> 
+                                 </div>
+                                 
+                              </div>
+                           </div>
+                           <div class="blog-main">
+                              <div class="post-thumbnail2">
+                                 <a href="{% url 'singleblog' %}"><img src="{% static 'assets/images/blog-3.jpg' %}"></a>
+                              </div>
+                              <div class="post-content-wrap">
+                                 <h3><a href="{% url 'singleblog' %}" rel="bookmark">8 ways to keep your heart forever young</a></h3>
+                                 <div class="entry-meta"> 
+                                    <span class="posted-on">
+                                       <a href="{% url 'singleblog' %}">
+                                       <time class="published">December 13, 2019</time></a>
+                                    </span> 
+                                    <span class="posted-author">
+                                       <span>by </span><a href="{% url 'singleblog' %}">admin</a>
+                                    </span>
+                                 </div>
+                                 <p>With 10+ apps and plugins, you’ll be able to review your upcoming tasks – and jot down new ones – no matter where you happen to be. Everything stays in perfect sync across.</p>
+                                 <div class="baneer-buton mt-5">
+                                    <a href="{% url 'singleblog' %}" class="buton2">Read more</a> 
+                                 </div>
+                                 
+                              </div>
+                           </div>
+                           
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-12">
+                           <div class="MainSideBar">
+                             <div class="SideSearch">
+                               <form role="search" method="get" action="">
+                                 <div class="blog-serchBox">
+                                   <div class="blog-search-grid">
+                                     <input type="term" name="term" id="term" placeholder="Search">
+                                   </div>
+                                 </div>
+                               </form>
+                             </div>
+                              <div class="SideSearch">
+                                 <div class="widget-top">
+                                    <div class="rightside-title">
+                                      <h6>Latest Posts</h6>
+                                      <span class="divider-line divider-short"></span>
+                                    </div>
+                                 </div>
+                                 <div class="post-col">
+                                    <div class="post-col-img">
+                                       <a href="{% url 'singleblog' %}">
+                                        <img src="{% static 'assets/images/blog-1.jpg' %}" class="img-responsive" alt="Image">
+                                      </a>
+                                    </div>
+                                    <div class="post-col-content">
+                                       <a href="{% url 'singleblog' %}">
+                                        <p class="latest-title">8 ways to keep your heart forever young</p>
+                                      </a>
+                                      <p class="latest-date">
+                                        <span>
+                                          <i class="fas fa-calendar-alt"></i>
+                                          <a href="{% url 'singleblog' %}">March 31, 2022</a>
+                                        </span>
+                                      </p>
+                                    </div>
+                                 </div>
+                                 <div class="post-col">
+                                    <div class="post-col-img">
+                                       <a href="{% url 'singleblog' %}">
+                                        <img src="{% static 'assets/images/blog-3.jpg' %}" class="img-responsive" alt="Image">
+                                      </a>
+                                    </div>
+                                    <div class="post-col-content">
+                                       <a href="{% url 'singleblog' %}">
+                                        <p class="latest-title">8 ways to keep your heart forever young</p>
+                                      </a>
+                                      <p class="latest-date">
+                                        <span>
+                                          <i class="fas fa-calendar-alt"></i>
+                                          <a href="singleblog.html">March 31, 2022</a>
+                                        </span>
+                                      </p>
+                                    </div>
+                                 </div>
+                                 <div class="post-col">
+                                    <div class="post-col-img">
+                                       <a href="{% url 'singleblog' %}">
+                                        <img src="{% static 'assets/images/blog-1.jpg' %}" class="img-responsive" alt="Image">
+                                      </a>
+                                    </div>
+                                    <div class="post-col-content">
+                                       <a href="{% url 'singleblog' %}">
+                                        <p class="latest-title">8 ways to keep your heart forever young</p>
+                                      </a>
+                                      <p class="latest-date">
+                                        <span>
+                                          <i class="fas fa-calendar-alt"></i>
+                                          <a href="{% url 'singleblog' %}">March 31, 2022</a>
+                                        </span>
+                                      </p>
+                                    </div>
+                                 </div>
+                                 <div class="post-col">
+                                    <div class="post-col-img">
+                                       <a href="{% url 'singleblog' %}">
+                                        <img src="{% static 'assets/images/blog-2.jpg' %}" class="img-responsive" alt="Image">
+                                      </a>
+                                    </div>
+                                    <div class="post-col-content">
+                                       <a href="{% url 'singleblog' %}">
+                                        <p class="latest-title">8 ways to keep your heart forever young</p>
+                                      </a>
+                                      <p class="latest-date">
+                                        <span>
+                                          <i class="fas fa-calendar-alt"></i>
+                                          <a href="{% url 'singleblog' %}">March 31, 2022</a>
+                                        </span>
+                                      </p>
+                                    </div>
+                                 </div>
+                             </div>
+                           </div>
+                         </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+      {% endblock %}

@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+<body>
+   {% block content %}
+      <!------------- //about-banner// -------------->
+      <!------------- //about-banner// -------------->
+      <section class="about-us">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="banner-contnet">
+                    <h2>Checkout</h2> 
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!------------- //about-banner// -------------->
+      <!------------- //about-banner// -------------->
+      <section class="Checkout-section">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-8">
+                  <div class="contct-wap Billing-detail">
+                     <h2>Billing Details</h2>
+                     <form class="contact-form row" id="contact-page-contact-form">
+                        <div class="col-md-6">
+                           <label>Your Name <span>*</span></label>
+                          <input type="text" name="name" placeholder="">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Mobile Number <span>*</span></label>
+                          <input type="number" name="phone">
+                        </div>
+                        <div class="col-md-6">
+                           <label>E-Mail <span>*</span></label>
+                          <input type="email" name="email">
+                        </div>
+                        <div class="col-md-6">
+                           <label>Pincode<span>*</span></label>
+                          <input type="text" name="email">
+                        </div>
+                        <div class="col-md-6">
+                           <label>House no.<span>*</span></label>
+                          <input type="text" name="House">
+                        </div>
+                         <div class="col-md-6">
+                           <label>Area, Street<span>*</span></label>
+                          <input type="text" name="Street">
+                        </div>
+                        <div class="col-md-6">
+                           <label>Landmark<span>*</span></label>
+                          <input type="text" name="Landmark">
+                        </div>
+                        <div class="col-md-6">
+                           <label>Alt.Mobile No</label>
+                          <input type="text" name="Alt">
+                        </div>
+                        <div class="col-md-6">
+                           <label>City<span>*</span></label>
+                           <input type="text" name="City">
+                        </div>
+                        <div class="col-md-6">
+                           <label>State<span>*</span></label>
+                           <input type="text" name="State">
+                        </div>
+                        <div class="col-md-12">
+                          <button class="custom-btn" type="submit">Proceed to Secure Payment</button>
+                        </div>
+                     </form>
+                  </div>
+                  
+               </div>
+               <div class="col-md-4">
+                  <div class="contct-wap Billing-detail">
+                     <h2>Your Order</h2>
+                     <table class="shop_table">
+                       <thead>
+                         <tr>
+                           <th class="product-name">Product</th>
+                           <th class="product-total">Subtotal</th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <tr class="cart_item">
+                           <td class="product-name product-name2"> Big Parcel 6-20kg <strong class="product-quantity">×   1</strong>
+                           </td>
+                           <td class="product-total product-name2">
+                             <span class="woocommerce-Price-amount amount">
+                               <bdi>
+                                 <span class="woocommerce-Price-currencySymbol">₹</span>30.00 </bdi>
+                             </span>
+                           </td>
+                         </tr>
+                         <tr class="cart_item">
+                           <td class="product-name"> Cargo Container <strong class="product-quantity">×  1</strong>
+                           </td>
+                           <td class="product-total">
+                             <span class="woocommerce-Price-amount amount">
+                               <bdi>
+                                 <span class="woocommerce-Price-currencySymbol">₹</span>450.00 </bdi>
+                             </span>
+                           </td>
+                         </tr>
+                         <tr class="cart_item ">
+                           <td class="product-name"> Envelope 500g <strong class="product-quantity">×  1</strong>
+                           </td>
+                           <td class="product-total">
+                             <span class="woocommerce-Price-amount amount">
+                               <bdi>
+                                 <span class="woocommerce-Price-currencySymbol">₹</span>3.00 </bdi>
+                             </span>
+                           </td>
+                         </tr>
+                       </tbody>
+                       <tfoot>
+                         <tr class="cart-subtotal">
+                           <th>Subtotal</th>
+                           <td>
+                             <span class="woocommerce-Price-amount amount">
+                               <bdi>
+                                 <span class="woocommerce-Price-currencySymbol">₹</span>483.00 </bdi>
+                             </span>
+                           </td>
+                         </tr>
+                         <tr class="order-total">
+                           <th>Total</th>
+                           <td>
+                             <strong>
+                               <span class="woocommerce-Price-amount amount">
+                                 <bdi>
+                                   <span class="woocommerce-Price-currencySymbol">₹</span>483.00 </bdi>
+                               </span>
+                             </strong>
+                           </td>
+                         </tr>
+                       </tfoot>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+     
+      {% endblock %}
+
+   
+
+
+
+
+
+

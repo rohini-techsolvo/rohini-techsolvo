@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+<body>
+   {% block content %}
+      <!-- Start Mobile Menu Area -->
+      <div class="mobile-menu-area">
+         <!--offcanvas menu area start-->
+         <div class="off_canvars_overlay">
+         </div>
+         <div class="offcanvas_menu">
+            <div class="offcanvas_menu_wrapper">
+               <div class="canvas_close">
+                  <a href="javascript:void(0)"><i class="fas fa-times"></i></a>  
+               </div>
+               <div class="mobile-logo">
+                  <h2><a href="index.html"><img src="{% static 'assets/images/logo3.png' %}"></a></h2>
+               </div>
+               <div id="menu" class="text-left ">
+                  <ul class="offcanvas_main_menu">
+                     <li class="menu-item-has-children">
+                        <a href="index.html">Home</a>
+                     </li>
+                     <li class="menu-item-has-children">
+                        <a href="aboutus.html">About Us</a> 
+                     </li>
+                     <li class="menu-item-has-children active">
+                        <a href="#">Products</a>
+                        <ul class="sub-menu">
+                           <li><a href="product.html">Monthly learning</a></li>
+                           <li><a href="singleproduct.html">Phonics</a></li>
+                        </ul>
+                     </li>
+                     <li class="menu-item-has-children active">
+                        <a href="#">Shop by age</a>
+                        <ul class="sub-menu">
+                           <li><a href="product.html">1-3 Years</a></li>
+                           <li><a href="product.html">3-6 Years</a></li>
+                        </ul>
+                     </li>
+                     <li class="menu-item-has-children">
+                        <a href="Blog.html">Blog</a> 
+                     </li>
+                     <li class="menu-item-has-children">
+                        <a href="Contact.html">Contact Us</a> 
+                     </li>
+                     <li class="menu-item-has-children">
+                        <a href="Contact.html">Login/Signup</a> 
+                     </li>
+                     <li><a href="#" class="bunow">Buy Now</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--offcanvas menu area end-->
+      <!------------- //header// -------------->
+      <!------------- //header// -------------->
+
+      <!------------- //about-banner// -------------->
+      <!------------- //about-banner// -------------->
+      <section class="about-us">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="banner-contnet">
+                    <h2>KG – II Learning Kit</h2> 
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!------------- //about-banner// -------------->
+      <!------------- //about-banner// -------------->
+      <section class="single-product">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="prduct-imag">
+                     <img src="{% static 'assets/images/about2.jpg' %}" alt="">
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="right-contentwap">
+                     <h6>what's in the kit</h6>
+                     <span>"A single box....</span>
+                     <p>Let your little ones enjoy the edge of new learning. Make them early learners with brainy Ladder’s KG – II activity kits</p>
+                     <p>The KG - II Brainy Ladder activity kit provides a holistic learning experience for your children. This kit is suitable for ages 4.5 - 6 years; this year long activity kit is an integrated learning program which is designed to develop the needed skills in your child. Skills such as linguistic skills, logical thinking, sensory and motor skills, cognitive skills and social skills.</p>
+                     <p>This activity kit dedicated to the category of playgroup children helps in building:</p>
+                     <ul class="clild">
+                         <li>Part 1 – thematic learning on my home, my family, my body; learning about garden tools & insects, living and non – living things;</li>
+                         <li>Part 2 – Learn about animals, birds, plants, trees, flowers, seasons</li>
+                         <li>Part 3 – learning focused on festivals, calendar months & years, different things around the world</li>
+                         <li>Part 4 – learning early numeracy skills with addition to learning all about money (currency)</li>
+                     </ul>
+                     <a href="{% url 'cart' %}" class="bunow">Buy Now for 4799/-</a>
+                  </div>
+               </div>
+               <div class="col-md-12">
+                  <div class="kit">
+                     <h6>A single box containing a year’s worth of learning for your children containing 300+ high quality & engaging study materials</h6>
+                     <ul>
+                        <li><i class="fas fa-hand-point-right"></i>Worksheets – 200+ worksheets have been curated in the most engaging manner keeping the child’s average attention span in mind</li>
+                        <li><i class="fas fa-hand-point-right"></i>Flashcards – 30+ full sized flashcards, which are the most versatile items in our kits and are used to learn basic concepts in many ways</li>
+                        <li><i class="fas fa-hand-point-right"></i>Activity Sheets – 200+ Activity sheets are designed in a manner to ensure your child’s engagement towards learning. Activities include puzzles, craft integrated & DIY activities</li>
+                        <li><i class="fas fa-hand-point-right"></i>Posters – Attractive large print posters for activities which help in learning new concepts in an interesting manner.</li>
+                        <li><i class="fas fa-hand-point-right"></i>………and many more exciting activitie.</li>
+                     </ul>
+                     
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </section>
+      
+
+
+
+{% endblock %}
+
+
+
+
+
+
